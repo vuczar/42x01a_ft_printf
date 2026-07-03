@@ -10,4 +10,7 @@
 
 ## Resources
 
+### Some sites
 
+- Tutorial how to make a makefile step by step: https://makefiletutorial.com/
+- 
