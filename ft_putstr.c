@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimauric <vimauric@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/03 11:01:42 by vimauric          #+#    #+#             */
-/*   Updated: 2026/07/03 11:09:02 by vimauric         ###   ########.fr       */
+/*   Created: 2026/08/08 21:36:08 by vimauric          #+#    #+#             */
+/*   Updated: 2026/08/08 21:39:58 by vimauric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdarg.h>
+#include "ft_printf.h"
 
-void	print(int count, ...)
+int ft_putstr(char *str)
 {
-	va_list args;
-	va_start(args, count);
-	for (int i = 0; i < count; i++)
+	int	i;
+	int	total;
+
+	i = 0;
+	if (!str)
+		str = "(null)";
+	while (str[i])
 	{
-		printf("%d ", va_arg(args, int));
+		ft_putchar(str[i]);
+		i++;
 	}
-	va_end(args);
-	printf("\n");
-}
-
-int	main()
-{
-	print(3, 1, 2, 3);
-	print(5, 10, 20, 30, 40, 50);
-	return (0);
+	return (i);
 }
