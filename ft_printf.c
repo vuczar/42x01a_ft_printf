@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vimauric <vimauric@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: vimauric <vimauric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 17:32:56 by vimauric          #+#    #+#             */
-/*   Updated: 2026/08/08 20:48:57 by vimauric         ###   ########.fr       */
+/*   Updated: 2026/08/19 18:37:47 by vimauric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_handle_format(char c, va_list args)
+static int	ft_format(char c, va_list args)
 {
 	int	total;
 
@@ -53,7 +53,7 @@ int	ft_printf(const char *format, ...)
 		{
 			i++;
 			if (format[i])
-				total += ft_handle_format_format(format[i], args);
+				total += ft_format(format[i], args);
 		}
 		else
 			total += ft_putchar(format[i]);
