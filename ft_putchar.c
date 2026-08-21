@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vimauric <vimauric@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: vimauric <vimauric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 21:26:04 by vimauric          #+#    #+#             */
-/*   Updated: 2026/08/08 21:35:35 by vimauric         ###   ########.fr       */
+/*   Updated: 2026/08/21 19:17:50 by vimauric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, c, 1);
 	return (1);

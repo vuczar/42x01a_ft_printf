@@ -6,7 +6,7 @@
 /*   By: vimauric <vimauric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/19 17:58:33 by vimauric          #+#    #+#             */
-/*   Updated: 2026/08/19 18:56:54 by vimauric         ###   ########.fr       */
+/*   Updated: 2026/08/21 19:19:13 by vimauric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_putnbr(int n)
 {
 	long	nb;
-	int 	count;
+	int		count;
 
 	nb = n;
 	if (nb < 0)

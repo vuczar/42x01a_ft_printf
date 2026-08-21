@@ -6,7 +6,7 @@
 /*   By: vimauric <vimauric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 17:32:56 by vimauric          #+#    #+#             */
-/*   Updated: 2026/08/19 18:37:47 by vimauric         ###   ########.fr       */
+/*   Updated: 2026/08/21 19:54:19 by vimauric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_format(char c, va_list args)
 	int	total;
 
 	total = 0;
-	if (c = 'c')
+	if (c == 'c')
 		total += ft_putchar(va_arg(args, int));
 	else if (c == 's')
 		total += ft_putstr(va_arg(args, char *));
@@ -38,7 +38,7 @@ static int	ft_format(char c, va_list args)
 
 int	ft_printf(const char *format, ...)
 {
-	va_list args;
+	va_list	args;
 	int		total;
 	int		i;
 
