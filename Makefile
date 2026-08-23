@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vimauric <vimauric@student.42.fr>          +#+  +:+       +#+         #
+#    By: vimauric <vimauric@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/03 17:19:19 by vimauric          #+#    #+#              #
-#    Updated: 2026/07/03 18:35:40 by vimauric         ###   ########.fr        #
+#    Updated: 2026/08/22 18:24:33 by vimauric         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

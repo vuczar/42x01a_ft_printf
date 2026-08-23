@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vimauric <vimauric@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vimauric <vimauric@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 17:32:56 by vimauric          #+#    #+#             */
-/*   Updated: 2026/08/21 19:54:19 by vimauric         ###   ########.fr       */
+/*   Updated: 2026/08/22 18:19:27 by vimauric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ static int	ft_format(char c, va_list args)
 	else if (c == 's')
 		total += ft_putstr(va_arg(args, char *));
 	else if (c == 'p')
-		total += ft_handle_ptr(va_arg(args, void *));
-	else if (c == 'd' | c == 'i')
+		total += ft_ptr(va_arg(args, void *));
+	else if (c == 'd' || c == 'i')
 		total += ft_putnbr(va_arg(args, int));
 	else if (c == 'u')
-		total += ft_putunsinged(va_arg(args, unsigned int));
+		total += ft_putunsigned(va_arg(args, unsigned int));
 	else if (c == 'x')
 		total += ft_puthex(va_arg(args, unsigned int));
 	else if (c == 'X')
@@ -49,16 +49,15 @@ int	ft_printf(const char *format, ...)
 	va_start(args, format);
 	while (format[i])
 	{
-		if (format == '%')
+		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
-			if (format[i])
-				total += ft_format(format[i], args);
+			total += ft_format(format[i], args);
 		}
 		else
 			total += ft_putchar(format[i]);
 		i++;
 	}
-	va_end (args);
+	va_end(args);
 	return (total);
 }
