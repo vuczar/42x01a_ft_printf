@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vimauric <vimauric@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: vimauric <vimauric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 17:32:56 by vimauric          #+#    #+#             */
-/*   Updated: 2026/08/22 18:19:27 by vimauric         ###   ########.fr       */
+/*   Updated: 2026/08/24 16:55:44 by vimauric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@ static int	ft_format(char c, va_list args)
 	else if (c == 'u')
 		total += ft_putunsigned(va_arg(args, unsigned int));
 	else if (c == 'x')
-		total += ft_puthex(va_arg(args, unsigned int));
+		total += ft_puthex((unsigned long)va_arg(args, unsigned int),
+				"0123456789abcdef");
 	else if (c == 'X')
-		total += ft_puthex_upper(va_arg(args, unsigned int));
+		total += ft_puthex((unsigned long)va_arg(args, unsigned int),
+				"0123456789ABCDEF");
 	else if (c == '%')
 		total += ft_putchar('%');
 	return (total);

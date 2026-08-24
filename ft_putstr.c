@@ -15,7 +15,6 @@
 int	ft_putstr(char *str)
 {
 	int	i;
-	int	total;
 
 	i = 0;
 	if (!str)
