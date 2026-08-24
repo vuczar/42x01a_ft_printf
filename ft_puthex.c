@@ -6,7 +6,7 @@
 /*   By: vimauric <vimauric@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/22 18:31:55 by vimauric          #+#    #+#             */
-/*   Updated: 2026/08/22 20:41:18 by vimauric         ###   ########.fr       */
+/*   Updated: 2026/08/24 14:38:33 by vimauric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_puthex(unsigned int n)
 	return (count);
 }
 
-int ft_puthex(unsigned int n)
+int ft_puthex_upper(unsigned int n)
 {
 	char	*base;
 	int		count;
